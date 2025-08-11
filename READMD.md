@@ -25,15 +25,16 @@ uv python pin 3.12
 ### 일반적인 개발 워크플로우
 ```shell
 # 1. 프로젝트 생성
-uv init my-project --python 3.12
 cd my-project
+uv init
+uv venv --python 3.13
 
 # 2. 의존성 추가
 uv add fastapi uvicorn
 uv add --dev pytest black ruff mypy
 
 # 3. 코드 작성
-# src/my_project/main.py 작성
+# src/myapp/main.py 작성
 
 # 4. 테스트 실행
 uv run pytest
@@ -43,7 +44,17 @@ uv run black src/
 uv run ruff check src/
 
 # 6. 애플리케이션 실행
-uv run python src/my_project/main.py
+uv run python src/myapp/main.py
+```
+
+### requirements.txt
+```shell
+uv venv .venv
+source .venv/bin/activate  # macOS / Linux
+# 또는
+.venv\Scripts\activate     # Windows (CMD 기준)
+
+uv pip install -r requirements.txt
 ```
 
 ### pyproject.toml 예제
