@@ -15,12 +15,7 @@ uv sync # uv.lock을 기준으로 .venv에 설치
 
 ## 의존성 추가
 ```shell
-uv add langchain
-uv add langchain-openai
-uv add load_dotenv
-uv add pytz
-uv add yfinance
-uv add tabulate
+uv add PyMuPDF pypdf langchain langchain_community langchain-openai load_dotenv langchain_chroma langchain_openai
 
 uv pip streamlit
 uv add streamlit
@@ -46,10 +41,9 @@ uv run streamlit hello
 export OPENAI_API_KEY=<openai api key> 
 uv pip install streamlit
 source .venv/bin/activate
-streamlit run ./src/sec05/langchain_simple_chat_streamlit.py
-streamlit run ./src/sec05/langchain_simple_chat_streamlit_0.py
-streamlit run ./src/sec05/langchain_streamlit_tool.py
-streamlit run ./src/sec05/langchain_streamlit_tool_0.py
+streamlit run ./src/sec03/rag.py
+streamlit run ./src/sec03/rag_0.py
+streamlit run ./src/sec03/rag_1.py
 ```
 
 http://localhost:8501/

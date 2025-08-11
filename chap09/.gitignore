@@ -1,0 +1,13 @@
+.vscode/
+.idea/
+.history/
+.venv/
+venv/
+
+src/data/*.pdf
+
+.DS_Store
+.env
+.env.local
+.env.development
+.env.production
